@@ -1,0 +1,16 @@
+<% if @url.blank? %>
+<p>
+	There is no urls available
+</p>
+<% else%>
+<h1>Available urls are as follows</h1>
+<ul>
+
+	<% @url.each do | u |%>
+
+	<li>
+		<%= u.url %>
+	</li>
+	<% end %>
+</ul>
+<% end %>

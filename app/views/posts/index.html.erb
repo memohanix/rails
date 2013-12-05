@@ -1,0 +1,10 @@
+<h1>Available post are as follows</h1>
+<ul>
+	<% @posts.each do | p| %>
+	<li>
+		<%= link_to p.name, {:action => 'show', :id => p.id} %> -- <%=link_to "Edit",{:action=>'edit',:id=>p.id}%> -- <%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</li>
+	
+	<% end %>
+	<p>  <%= link_to 'New posts', {:action => 'new'} %></p>
+</ul>

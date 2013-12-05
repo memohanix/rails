@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @brt.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @brt.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_brt_path(@brt) %> |
+<%= link_to 'Back', brts_path %>

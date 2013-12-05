@@ -1,0 +1,25 @@
+<h1>Listing brts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brts.each do |brt| %>
+  <tr>
+    <td><%= brt.name %></td>
+    <td><%= brt.address %></td>
+    <td><%= link_to 'Show', brt %></td>
+    <td><%= link_to 'Edit', edit_brt_path(brt) %></td>
+    <td><%= link_to 'Destroy', brt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Brt', new_brt_path %>
